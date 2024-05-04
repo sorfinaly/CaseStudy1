@@ -1,22 +1,27 @@
-# CaseStudy1
-
-# Group Project Report
+# Case Study 1 Report
 
 ## i. Group Name
-- Group Name: [Enter your group name here]
+- Group Name: Blue
 
 ## ii. Group Member Details
-1. **[Member 1 Name]** - Matric No: [Matric No]
-2. **[Member 2 Name]** - Matric No: [Matric No]
-3. **[Member 3 Name]** - Matric No: [Matric No]
+1. **Nadirah Binti Ros Liza** - Matric No: 2027832
+2. **Sorfina Alyia Binti Jazrry** - Matric No: 2017326
 
 ## iii. Assigned Tasks
-- **[Member 1 Name]**: [Task 1], [Task 2]
-- **[Member 2 Name]**: [Task 3], [Task 4]
-- **[Member 3 Name]**: [Task 5], [Task 6]
 
-## iv. Table of Contents
-- [TOC goes here]
+| Name           | Task                 |
+|----------------|----------------------|
+| Nadirah        | Task 1               |
+| Sorfina        | Task 2               |
+
+# Table of Contents
+
+1. [Brief Description of Air Selangor](#brief)
+2. [Objectives of the Case Study](#objective)
+3. [Identify Vulnerabilities](#identify)
+4. [Evaluate Vulnerabilities](#evaluate)
+5. [Prevent Vulnerabilities](#prevent)
+6. [References](#reference)
 
 ## List of Figures
 - [List of Figures goes here]
@@ -24,17 +29,19 @@
 ## List of Tables
 - [List of Tables goes here]
 
-## References
-- [References go here]
 
-## v. Brief Description of the Assigned Web Application and Objectives of the Case Study
-[Provide a brief description of the assigned web application and the objectives of the case study here.]
 
-## vi. Identify Vulnerabilities
-[Identify vulnerabilities in the assigned web application.]
+## 1. Brief Description of Air Selangor {#brief}
 
-## vii. Evaluate Vulnerabilities
-[Evaluate the identified vulnerabilities in the assigned web application.]
+## 2. Objectives of the Case Study {#objective}
 
-## viii. Prevent Vulnerabilities
-[Discuss strategies and methods to prevent the identified vulnerabilities in the assigned web application.]
+
+## 3. Identify Vulnerabilities {#identify}
+
+
+## 4. Evaluate Vulnerabilities {#evalute}
+
+
+## 5. Prevent Vulnerabilities {#prevent}
+
+## 6. References {#reference}
