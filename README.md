@@ -16,11 +16,11 @@
 
 # Table of Contents
 
-1. [Brief Description of Air Selangor](#brief)
-2. [Objectives of the Case Study](#objective)
-3. [Identify Vulnerabilities](#identify)
-4. [Evaluate Vulnerabilities](#evaluate)
-5. [Prevent Vulnerabilities](#prevent)
+1. [Brief Description of Air Selangor](#brief-description-of-air-selangor)
+2. [Objectives of the Case Study](#objectives-of-the-case-study)
+3. [Identify Vulnerabilities](#identify-vulnerabilities)
+4. [Evaluate Vulnerabilities](#evaluate-vulnerabilities)
+5. [Prevent Vulnerabilities](#prevent-vulnerabilities)
 6. [References](#reference)
 
 ## List of Figures
