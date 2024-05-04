@@ -21,7 +21,7 @@
 3. [Identify Vulnerabilities](#identify-vulnerabilities)
 4. [Evaluate Vulnerabilities](#evaluate-vulnerabilities)
 5. [Prevent Vulnerabilities](#prevent-vulnerabilities)
-6. [References](#reference)
+6. [References](#references)
 
 ## List of Figures
 - [List of Figures goes here]
@@ -31,17 +31,17 @@
 
 
 
-## 1. Brief Description of Air Selangor {#brief}
+## 1. Brief Description of Air Selangor 
 
-## 2. Objectives of the Case Study {#objective}
-
-
-## 3. Identify Vulnerabilities {#identify}
+## 2. Objectives of the Case Study 
 
 
-## 4. Evaluate Vulnerabilities {#evalute}
+## 3. Identify Vulnerabilities
 
 
-## 5. Prevent Vulnerabilities {#prevent}
+## 4. Evaluate Vulnerabilities 
 
-## 6. References {#reference}
+
+## 5. Prevent Vulnerabilities 
+
+## 6. References 
