@@ -35,9 +35,9 @@
 
 ## 2. Objectives of the Case Study <a id="objective"></a>
 
-
-## 3. Identify Vulnerabilities <a id="identify"></a>
-
+## 3. Vulnerablities <a id="identify"></a>
+## a. Server <a id="identify"></a>
+## b. Server <a id="identify"></a>
 
 ## 4. Evaluate Vulnerabilities <a id="evaluate"></a>
 
