@@ -35,6 +35,7 @@
 2. [Objective](#objective)
 3. [Vulnerabilities](#vuln)
     - [Server OS and Server-Side Scripting](#server)
+        - Timestamp Disclosure - Unix
     - [Hash Disclosure](#hash)
     - [CSRF](#csrf)
     - [Secured Cookies](#securedcookie)
@@ -44,6 +45,7 @@
     - [Cookie Poisoning](#cookiepoison)
     - [Potential XSS](#xss)
     - [Information Disclosure](#info)
+4. [References](#reference)
 
 ## List of Figures
 - [List of Figures goes here]
@@ -59,7 +61,7 @@
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li>[Server OS and Server-Side Scripting used](#server)</li>
+<li>Server OS and Server-Side Scripting used<a id="server"></a></i>
 
 <ol>
 <li>Timestamp Disclosure - Unix</li>
