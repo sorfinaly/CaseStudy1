@@ -43,6 +43,7 @@
 ### e. CSP <a id="csp"></a>
 <div style="margin-left: 20px;">
 #### 1. Content Security Policy (CSP) Header Not Set </div>
+
 |    	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 693<br>WASC id : 15      	|
