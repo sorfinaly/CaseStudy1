@@ -66,7 +66,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id:200 <br>WASC id : 13      	|
-| Identify 	|  A timestamp was disclosed by the application/web server - Unix	<br>**Evidence** <br> 1659364840, which evaluates to: 2022-08-01 22:40:40|
+| Identify 	|  A timestamp was disclosed by the application/web server - Unix	<br><br>**Evidence** <br><br> 1659364840, which evaluates to: 2022-08-01 22:40:40|
 | Evaluate 	| Risk: Low <br> Confidence: Low        	|
 | Prevent  	| Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns. |
 
@@ -80,7 +80,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br>**Evidence** <br> |
+| Identify 	|  	<br><br>**Evidence** <br><br> |
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
@@ -108,7 +108,7 @@
 |       	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br>**Evidence** <br> |
+| Identify 	|  	<br><br>**Evidence** <br><br> |
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
@@ -130,7 +130,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 1021 <br>WASC id : 15       	|
-| Identify 	| The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks. 	<br>**Evidence** <br> |
+| Identify 	| The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks. 	<br><br>**Evidence** <br><br> |
 | Evaluate 	| Risk: Medium <br> Confidence: Medium        	|
 | Prevent  	| Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app. If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive. |
 
@@ -139,7 +139,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 693 <br>WASC id : 15        	|
-| Identify 	| The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing. 	<br>**Evidence** <br> This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type. At "High" threshold this scan rule will not alert on client or server error responses. |
+| Identify 	| The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing. 	<br><br>**Evidence** <br><br> This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type. At "High" threshold this scan rule will not alert on client or server error responses. |
 | Evaluate 	| Risk: Low <br> Confidence: Medium        	|
 | Prevent  	|Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages. If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing. |
 
@@ -153,7 +153,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id:  829<br>WASC id : 15       	|
-| Identify 	|  The page includes one or more script files from a third-party domain	<br>**Evidence** <br> <ol><li><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js?ver=02fc163323d2ee7aa277411bbc10e1e7" id="gsap-js-js"></script></li><li><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117" crossorigin="anonymous"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=G-HC8HNVJVEZ"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150747362-1"></script></li><li><script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script></li></ol>|
+| Identify 	|  The page includes one or more script files from a third-party domain	<br><br>**Evidence** <br><br> <ol><li><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js?ver=02fc163323d2ee7aa277411bbc10e1e7" id="gsap-js-js"></script></li><li><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117" crossorigin="anonymous"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=G-HC8HNVJVEZ"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150747362-1"></script></li><li><script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script></li></ol>|
 | Evaluate 	| Risk:  Low <br> Confidence:   Medium        	|
 | Prevent  	| Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application. |
 
@@ -163,7 +163,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id:  829 <br>WASC id : (n/a)      	|
-| Identify 	| The identified library jquery-ui, version 1.12.1 is vulnerable. 	<br>**Evidence** <br> /*! jQuery UI - v1.12.1 |
+| Identify 	| The identified library jquery-ui, version 1.12.1 is vulnerable. 	<br><br>**Evidence** <br><br> /*! jQuery UI - v1.12.1 |
 | Evaluate 	| Risk: Medium <br> Confidence:    Medium     	|
 | Prevent  	| Please upgrade to the latest version of jquery-ui. |
 
@@ -178,7 +178,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 315 <br>WASC id : 15      	|
-| Identify 	| HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797. 	<br>**Evidence** <br> |
+| Identify 	| HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797. 	<br><br>**Evidence** <br><br> |
 | Evaluate 	| Risk: Low <br> Confidence: High        	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security. |
 
@@ -192,7 +192,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br>**Evidence** <br> |
+| Identify 	|  	<br><br>**Evidence** <br><br> |
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
@@ -206,7 +206,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br>**Evidence** <br> |
+| Identify 	|  	<br><br>**Evidence** <br><br> |
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
@@ -219,7 +219,7 @@
 |       	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id:  200 <br>WASC id : 13      	|
-| Identify 	| The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments. 	<br>**Evidence** <br> *Admin <br> The following pattern was used: \bADMIN\b and was detected 3 times, the first in the element starting with: "<script id="PopupBuilder.js-js-before"> var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages"", see evidence field for the suspicious comment/snippet. <br> *Query <br> The following pattern was used: \bQUERY\b and was detected in the element starting with: "<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization"", see evidence field for the suspicious comment/snippet.|
+| Identify 	| The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments. 	<br><br>**Evidence** <br><br> - Admin <br> The following pattern was used: \bADMIN\b and was detected 3 times, the first in the element starting with: "<script id="PopupBuilder.js-js-before"> var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages"", see evidence field for the suspicious comment/snippet. <br><br> - Query <br> The following pattern was used: \bQUERY\b and was detected in the element starting with: "<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization"", see evidence field for the suspicious comment/snippet.|
 | Evaluate 	| Risk: Informational<br> Confidence: Low         	|
 | Prevent  	| Remove all comments that return information that may help an attacker and fix any underlying problems they refer to. |
 
