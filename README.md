@@ -132,11 +132,7 @@
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id:  829<br>WASC id : 15       	|
-| Identify 	|  The page includes one or more script files from a third-party domain	<br>**Evidence** <br> <ol><li><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js?ver=02fc163323d2ee7aa277411bbc10e1e7" id="gsap-js-js"></script></li>
-<li><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117" crossorigin="anonymous"></script></li>
-<li><script async src="https://www.googletagmanager.com/gtag/js?id=G-HC8HNVJVEZ"></script></li>
-<li><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150747362-1"></script></li>
-<li><script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script></li></ol>|
+| Identify 	|  The page includes one or more script files from a third-party domain	<br>**Evidence** <br> <ol><li><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js?ver=02fc163323d2ee7aa277411bbc10e1e7" id="gsap-js-js"></script></li><li><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117" crossorigin="anonymous"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=G-HC8HNVJVEZ"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150747362-1"></script></li><li><script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script></li></ol>|
 | Evaluate 	| Risk:  Low <br> Confidence:   Medium        	|
 | Prevent  	| Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application. |
 
