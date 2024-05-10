@@ -15,13 +15,21 @@
 | Sorfina        | Task 2               |
 
 # Table of Contents
+<ol>
+<li>[Brief Description of Air Selangor](#brief)
+<li>[Objectives of the Case Study](#objective)
+<li>[Vulnerabilities](#vuln)</li>
+<li>[Server OS and Server-Side Scripting used]</li>
+<li>[Hash Disclosure](#hash)</li>
+<li>[CSRF](#csrf)</li>
+<li>[Secured Cookies](#securedcookie)</li>
+<li></li>
+<li></li>
+<li></li>
 
-1. [Brief Description of Air Selangor](#brief)
-2. [Objectives of the Case Study](#objective)
-3. [Identify Vulnerabilities](#identify)
-4. [Evaluate Vulnerabilities](#evaluate)
-5. [Prevent Vulnerabilities](#prevent)
-6. [References](#reference)
+[References](#reference)
+
+</ol>
 
 ## List of Figures
 - [List of Figures goes here]
