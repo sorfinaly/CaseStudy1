@@ -31,6 +31,20 @@
 
 </ol>
 
+1. [Brief](#brief)
+2. [Objective](#objective)
+3. [Vulnerabilities](#vulnerabilities)
+    - [Server OS and Server-Side Scripting](#server-os-and-server-side-scripting)
+    - [Hash Disclosure](#hash-disclosure)
+    - [CSRF](#csrf)
+    - [Secured Cookies](#secured-cookies)
+    - [CSP](#csp)
+    - [JS Library](#js-library)
+    - [HTTPS Implementation (TLS/SSL)](#https-implementation-tlsssl)
+    - [Cookie Poisoning](#cookie-poisoning)
+    - [Potential XSS](#potential-xss)
+    - [Information Disclosure](#information-disclosure)
+
 ## List of Figures
 - [List of Figures goes here]
 
