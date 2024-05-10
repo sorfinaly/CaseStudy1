@@ -41,9 +41,8 @@
 ### c. CSRF <a id="csrf"></a>
 ### d. Secured Cookies <a id="securedcookie"></a>
 ### e. CSP <a id="csp"></a>
-<blockquote>
-#### 1. Content Security Policy (CSP) Header Not Set
-</blockquote>
+<div style="margin-left: 20px;">
+#### 1. Content Security Policy (CSP) Header Not Set </div>
 |    	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 693<br>WASC id : 15      	|
@@ -51,7 +50,15 @@
 | Evaluate 	| Risk: Medium <br> Confidence: High                    	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header. |
 ### f. JS Library <a id="js"></a>
+|    	| Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: <br>WASC id :       	|
+| Identify 	|  	<br>**Evidence** <br> |
+| Evaluate 	| Risk:  <br> Confidence:         	|
+| Prevent  	|  |
+
 ### g. HTTPS Implementation <a id="https"></a>
+
 ### h. Cookie Poisoning <a id="cookiepoison"></a>
 ### i. Potential XSS <a id="xss"></a>
 ### j. Information Disclosure <a id="info"></a>
