@@ -37,13 +37,13 @@
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li> a. Server OS and Server-Side Scripting used<a id="server"></a></i>
-<li> b. Hash Disclosure <a id="hash"></a></li>
-<li> c. CSRF <a id="csrf"></a><li>
-<li> d. Secured Cookies <a id="securedcookie"></a></li>
-<li> e. CSP <a id="csp"></a></li>
+<li>Server OS and Server-Side Scripting used<a id="server"></a></i>
+<li>Hash Disclosure <a id="hash"></a></li>
+<li>CSRF <a id="csrf"></a><li>
+<li>Secured Cookies <a id="securedcookie"></a></li>
+<li>CSP <a id="csp"></a></li>
 <ol>
-<li> 1. Content Security Policy (CSP) Header Not Set </li>
+<li>Content Security Policy (CSP) Header Not Set </li>
 
 |    	| Description      	|
 |----------	|----------------------------------	|
@@ -53,7 +53,7 @@
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header. |
 </ol>
 
-<li> f. JS Library <a id="js"></a> </li>
+<li>JS Library <a id="js"></a> </li>
 
 |    	| Description      	|
 |----------	|----------------------------------	|
@@ -62,7 +62,7 @@
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
-<li> g. HTTPS Implementation <a id="https"></a> </li>
+<li>HTTPS Implementation <a id="https"></a> </li>
 
 |    	| Description      	|
 |----------	|----------------------------------	|
@@ -71,7 +71,7 @@
 | Evaluate 	| Risk: Low <br> Confidence: High        	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security. |
 
-<li> h. Cookie Poisoning <a id="cookiepoison"></a> </li>
+<li>Cookie Poisoning <a id="cookiepoison"></a> </li>
 
 |    	| Description      	|
 |----------	|----------------------------------	|
@@ -80,7 +80,7 @@
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
-<li> i. Potential XSS <a id="xss"></a> </li>
+<li>Potential XSS <a id="xss"></a> </li>
 
 |    	| Description      	|
 |----------	|----------------------------------	|
@@ -89,14 +89,12 @@
 | Evaluate 	| Risk:  <br> Confidence:         	|
 | Prevent  	|  |
 
-<li> j. Information Disclosure <a id="info"></a> </li>
+<li>Information Disclosure <a id="info"></a> </li>
 
 |    	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	| The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments. 	<br>**Evidence** <br> *Admin <br> The following pattern was used: \bADMIN\b and was detected 3 times, the first in the element starting with: "<script id="PopupBuilder.js-js-before">
-var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages"", see evidence field for the suspicious comment/snippet. <br>
-*Query <br> The following pattern was used: \bQUERY\b and was detected in the element starting with: "<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization"", see evidence field for the suspicious comment/snippet.|
+| Identify 	| The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments. 	<br>**Evidence** <br> *Admin <br> The following pattern was used: \bADMIN\b and was detected 3 times, the first in the element starting with: "<script id="PopupBuilder.js-js-before"> var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages"", see evidence field for the suspicious comment/snippet. <br> *Query <br> The following pattern was used: \bQUERY\b and was detected in the element starting with: "<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization"", see evidence field for the suspicious comment/snippet.|
 | Evaluate 	| Risk: Informational<br> Confidence: Low         	|
 | Prevent  	| Remove all comments that return information that may help an attacker and fix any underlying problems they refer to. |
 
