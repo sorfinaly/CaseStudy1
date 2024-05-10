@@ -33,17 +33,17 @@
 
 1. [Brief](#brief)
 2. [Objective](#objective)
-3. [Vulnerabilities](#vulnerabilities)
-    - [Server OS and Server-Side Scripting](#server-os-and-server-side-scripting)
-    - [Hash Disclosure](#hash-disclosure)
+3. [Vulnerabilities](#vuln)
+    - [Server OS and Server-Side Scripting](#server)
+    - [Hash Disclosure](#hash)
     - [CSRF](#csrf)
-    - [Secured Cookies](#secured-cookies)
+    - [Secured Cookies](#securedcookie)
     - [CSP](#csp)
-    - [JS Library](#js-library)
-    - [HTTPS Implementation (TLS/SSL)](#https-implementation-tlsssl)
-    - [Cookie Poisoning](#cookie-poisoning)
-    - [Potential XSS](#potential-xss)
-    - [Information Disclosure](#information-disclosure)
+    - [JS Library](#js)
+    - [HTTPS Implementation](#https)
+    - [Cookie Poisoning](#cookiepoison)
+    - [Potential XSS](#xss)
+    - [Information Disclosure](#info)
 
 ## List of Figures
 - [List of Figures goes here]
@@ -59,7 +59,7 @@
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li>Server OS and Server-Side Scripting used<a id="server"></a></i>
+<li>[Server OS and Server-Side Scripting used](#server)</li>
 
 <ol>
 <li>Timestamp Disclosure - Unix</li>
