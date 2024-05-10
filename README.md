@@ -42,7 +42,7 @@
 ### d. Secured Cookies <a id="securedcookie"></a>
 ### e. CSP <a id="csp"></a>
 
-  #### 1. Content Security Policy (CSP) Header Not Set
+   #### 1. Content Security Policy (CSP) Header Not Set
 |    	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 693<br>WASC id : 15      	|
