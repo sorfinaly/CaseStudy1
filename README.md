@@ -61,7 +61,7 @@
 <li>Server OS and Server-Side Scripting used<a id="server"></a></i>
 
 <ol>
-<li>Timestamp Disclosure - Unix</li>
+<li>Timestamp Disclosure - Unix</li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -75,7 +75,7 @@
 <li>Hash Disclosure <a id="hash"></a></li>
 
 <ol>
-<li></li>
+<li></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -89,7 +89,7 @@
 <li>CSRF <a id="csrf"></a><li>
 
 <ol>
-<li>Absence of Anti-CSRF Tokens</li>
+<li>Absence of Anti-CSRF Tokens</li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -103,7 +103,7 @@
 <li>Secured Cookies <a id="securedcookie"></a></li>
 
 <ol>
-<li></li>
+<li></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -116,7 +116,7 @@
 
 <li>CSP <a id="csp"></a></li>
 <ol>
-<li>Content Security Policy (CSP) Header Not Set </li>
+<li>Content Security Policy (CSP) Header Not Set </li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -125,7 +125,7 @@
 | Evaluate 	| Risk: Medium <br> Confidence: High                    	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header. |
 
-<li>Missing Anti-clicking Header </li>
+<li>Missing Anti-clicking Header </li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -134,7 +134,7 @@
 | Evaluate 	| Risk: Medium <br> Confidence: Medium        	|
 | Prevent  	| Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app. If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive. |
 
-<li>X-Content-Type-Options Header Missing</li>
+<li>X-Content-Type-Options Header Missing</li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -148,7 +148,7 @@
 <li>JS Library <a id="js"></a> </li>
 
 <ol>
-<li>Cross-Domain JavaScript Source File Inclusion</li>
+<li>Cross-Domain JavaScript Source File Inclusion</li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -158,7 +158,7 @@
 | Prevent  	| Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application. |
 
 
-<li>Vulnerable JS LIbrary </li>
+<li>Vulnerable JS LIbrary </li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -173,7 +173,7 @@
 <li>HTTPS Implementation <a id="https"></a> </li>
 
 <ol>
-<li>Strict-Transport-Security Header Not Set</li>
+<li>Strict-Transport-Security Header Not Set</li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -187,7 +187,7 @@
 <li>Cookie Poisoning <a id="cookiepoison"></a> </li>
 
 <ol>
-<li></li>
+<li></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -201,7 +201,7 @@
 <li>Potential XSS <a id="xss"></a> </li>
 
 <ol>
-<li></li>
+<li></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -214,7 +214,7 @@
 
 <li>Information Disclosure <a id="info"></a> </li>
 <ol>
-<li>Suspicious Comments</li>
+<li>Suspicious Comments</li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
