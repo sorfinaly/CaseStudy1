@@ -35,12 +35,13 @@
 
 ## 2. Objectives of the Case Study <a id="objective"></a>
 
-## 3. Vulnerablities <a id="identify"></a>
-### a. Server OS and Server-Side Scripting used<a id="identify"></a>
-### b. Hash Disclosure
-### c. CSRF
-### d. Secured Cookies
-### e. CSP
+## 3. Vulnerablities <a id="vuln"></a>
+### a. Server OS and Server-Side Scripting used<a id="server"></a>
+### b. Hash Disclosure <a id="hash"></a>
+### c. CSRF <a id="csrf"></a>
+### d. Secured Cookies <a id="securedcookie"></a>
+### e. CSP <a id="csp"></a>
+
   #### 1. Content Security Policy (CSP) Header Not Set
 |    	| Description      	|
 |----------	|----------------------------------	|
@@ -48,10 +49,10 @@
 | Identify 	| Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files. 	|
 | Evaluate 	| Risk: Medium <br> Confidence: High                    	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header. |
-### f. JS Library
-### g. HTTPS Implementation
-### h. Cookie Poisoning
-### i. Potential XSS
-### j. Information Disclosure
+### f. JS Library <a id="js"></a>
+### g. HTTPS Implementation <a id="https"></a>
+### h. Cookie Poisoning <a id="cookiepoison"></a>
+### i. Potential XSS <a id="xss"></a>
+### j. Information Disclosure <a id="info"></a>
 
 ## 6. References <a id="reference"></a>
