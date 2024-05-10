@@ -15,21 +15,6 @@
 | Sorfina        | Task 2               |
 
 # Table of Contents
-<ol>
-<li>[Brief Description of Air Selangor](#brief)
-<li>[Objectives of the Case Study](#objective)
-<li>[Vulnerabilities](#vuln)</li>
-<li>[Server OS and Server-Side Scripting used]</li>
-<li>[Hash Disclosure](#hash)</li>
-<li>[CSRF](#csrf)</li>
-<li>[Secured Cookies](#securedcookie)</li>
-<li></li>
-<li></li>
-<li></li>
-
-[References](#reference)
-
-</ol>
 
 1. [Brief](#brief)
 2. [Objective](#objective)
@@ -38,13 +23,25 @@
         - Timestamp Disclosure - Unix
     - [Hash Disclosure](#hash)
     - [CSRF](#csrf)
+        - Absence of Anti-CSRF Tokens
+        - Missing Anti-clicking Header
+
     - [Secured Cookies](#securedcookie)
     - [CSP](#csp)
+        - Content Security Policy (CSP) Header Not Set
+        - Missing Anti-clicking Header
+        - X-Content-Type-Options Header Missing
+
     - [JS Library](#js)
+        - Cross-Domain JavaScript Source File Inclusion
+        - Vulnerable JS LIbrary 
+
     - [HTTPS Implementation](#https)
+        - Strict-Transport-Security Header Not Set
     - [Cookie Poisoning](#cookiepoison)
     - [Potential XSS](#xss)
     - [Information Disclosure](#info)
+        - Suspicious Comments
 4. [References](#reference)
 
 ## List of Figures
