@@ -40,14 +40,14 @@
 <li>Server OS and Server-Side Scripting used<a id="server"></a></i>
 
 <ol>
-<li></li>
+<li>Timestamp Disclosure - Unix</li>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br>**Evidence** <br> |
-| Evaluate 	| Risk:  <br> Confidence:         	|
-| Prevent  	|  |
+| Alert    	| CWE id:200 <br>WASC id : 13      	|
+| Identify 	|  A timestamp was disclosed by the application/web server - Unix	<br>**Evidence** <br> 1659364840, which evaluates to: 2022-08-01 22:40:40|
+| Evaluate 	| Risk: Low <br> Confidence: Low        	|
+| Prevent  	| Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns. |
 
 </ol>
 
@@ -68,14 +68,59 @@
 <li>CSRF <a id="csrf"></a><li>
 
 <ol>
-<li></li>
+<li>Absence of Anti-CSRF Tokens</li>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br>**Evidence** <br> |
-| Evaluate 	| Risk:  <br> Confidence:         	|
-| Prevent  	|  |
+| Alert    	| CWE id: 352<br>WASC id :       	|
+| Identify 	|  No Anti-CSRF tokens were found in a HTML submission form.
+
+A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.
+
+CSRF attacks are effective in a number of situations, including:
+
+* The victim has an active session on the target site.
+
+* The victim is authenticated via HTTP auth on the target site.
+
+* The victim is on the same local network as the target site.
+
+CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.
+	<br>**Evidence** <br> <form data-sf-form-id="7462" data-is-rtl="0" data-maintain-state data-results-url="https://www.airselangor.com/?sfid=7462" data-ajax-form-url="https://www.airselangor.com/?sfid=7462&amp;sf_action=get_data&amp;sf_data=form" data-display-result-method="archive" data-use-history-api="1" data-template-loaded="0" data-lang-code="en" data-ajax="0" data-init-paged="1" data-auto-update="1" action="https://www.airselangor.com/?sfid=7462" method="post" class="searchandfilter" id="search-filter-form-7462" autocomplete="off" data-instance-count="2">
+
+No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: "_sf_search[]" ].
+|
+| Evaluate 	| Risk:  Medium<br> Confidence: Low         	|
+| Prevent  	| Phase: Architecture and Design
+
+Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.
+
+For example, use anti-CSRF packages such as the OWASP CSRFGuard.
+
+Phase: Implementation
+
+Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.
+
+Phase: Architecture and Design
+
+Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).
+
+Note that this can be bypassed using XSS.
+
+Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.
+
+Note that this can be bypassed using XSS.
+
+Use the ESAPI Session Management control.
+
+This control includes a component for CSRF.
+
+Do not use the GET method for any request that triggers a state change.
+
+Phase: Implementation
+
+Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.
+ |
 
 </ol>
 
@@ -136,6 +181,17 @@
 | Evaluate 	| Risk:  Low <br> Confidence:   Medium        	|
 | Prevent  	| Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application. |
 
+
+<li>Vulnerable JS LIbrary </li>
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id:  829 <br>WASC id : (n/a)      	|
+| Identify 	| The identified library jquery-ui, version 1.12.1 is vulnerable. 	<br>**Evidence** <br> /*! jQuery UI - v1.12.1 |
+| Evaluate 	| Risk: Medium <br> Confidence:    Medium     	|
+| Prevent  	| Please upgrade to the latest version of jquery-ui. |
+
+
 </ol>
 
 <li>HTTPS Implementation <a id="https"></a> </li>
@@ -181,7 +237,7 @@
 </ol>
 
 <li>Information Disclosure <a id="info"></a> </li>
-
+<ol>
 <li>Suspicious Comments</li>
 
 |       	| Description      	|
@@ -190,6 +246,8 @@
 | Identify 	| The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments. 	<br>**Evidence** <br> *Admin <br> The following pattern was used: \bADMIN\b and was detected 3 times, the first in the element starting with: "<script id="PopupBuilder.js-js-before"> var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages"", see evidence field for the suspicious comment/snippet. <br> *Query <br> The following pattern was used: \bQUERY\b and was detected in the element starting with: "<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization"", see evidence field for the suspicious comment/snippet.|
 | Evaluate 	| Risk: Informational<br> Confidence: Low         	|
 | Prevent  	| Remove all comments that return information that may help an attacker and fix any underlying problems they refer to. |
+
+</ol>
 
 </ol>
 
