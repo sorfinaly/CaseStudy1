@@ -36,12 +36,22 @@
 ## 2. Objectives of the Case Study <a id="objective"></a>
 
 ## 3. Vulnerablities <a id="identify"></a>
-## a. Server <a id="identify"></a>
-## b. Server <a id="identify"></a>
-
-## 4. Evaluate Vulnerabilities <a id="evaluate"></a>
-
-
-## 5. Prevent Vulnerabilities <a id="prevent"></a>
+### a. Server OS and Server-Side Scripting used<a id="identify"></a>
+### b. Hash Disclosure
+### c. CSRF
+### d. Secured Cookies
+### e. CSP
+#### 1. Content Security Policy (CSP) Header Not Set
+| Alert    	| CWE id: 693<br>WASC id : 15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  	|
+|----------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Alert    	| CWE id: 693<br>WASC id : 15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  	|
+| Identify 	| Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files. 	|
+| Evaluate 	| Risk: Medium <br>Confidence: High                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            	|
+| Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	|
+### f. JS Library
+### g. HTTPS Implementation
+### h. Cookie Poisoning
+### i. Potential XSS
+### j. Information Disclosure
 
 ## 6. References <a id="reference"></a>
