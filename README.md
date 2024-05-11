@@ -103,6 +103,15 @@ The web/application server is leaking version information via the "Server" HTTP 
 | Evaluate 	| Risk: Low <br> Confidence:  Medium       	|
 | Prevent  	| Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies. |
 
+<li>Cross-Domain Misconfiguration</li><br>
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 	264<br>WASC id :  	14     	|
+| Identify 	| Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server <br> The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing. <br><br>**Evidence** <br><br>Access-Control-Allow-Origin: * |
+| Evaluate 	| Risk: Medium <br> Confidence:     Medium    	|
+| Prevent  	|Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance). Configure the "Access-Control-Allow-Origin" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner. |
+
 </ol>
 
 <li>Secured Cookies <a id="securedcookie"></a></li>
