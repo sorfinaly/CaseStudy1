@@ -20,17 +20,20 @@
 2. [Objective](#objective)
 3. [Vulnerabilities](#vuln)
     - [Server OS and Server-Side Scripting](#server)
-        - Timestamp Disclosure - Unix
+        - Server OS and Server-Side Scripting used
     - [Hash Disclosure](#hash)
     - [CSRF](#csrf)
         - Absence of Anti-CSRF Tokens
-        - Missing Anti-clicking Header
+        - Cookie with SameSite Attribute None
+        - Cross-Domain Misconfiguration
 
     - [Secured Cookies](#securedcookie)
+        - Session ID in URL Rewrite
+        - Retrieved from Cache
+        - Loosely Scoped Cookie
     - [CSP](#csp)
         - Content Security Policy (CSP) Header Not Set
         - Missing Anti-clicking Header
-        - X-Content-Type-Options Header Missing
 
     - [JS Library](#js)
         - Cross-Domain JavaScript Source File Inclusion
@@ -38,10 +41,15 @@
 
     - [HTTPS Implementation](#https)
         - Strict-Transport-Security Header Not Set
+
     - [Cookie Poisoning](#cookiepoison)
     - [Potential XSS](#xss)
     - [Information Disclosure](#info)
         - Suspicious Comments
+        - Sensitive Information in URL
+        - Re-examine Cache-control Directives
+        - X-Content-Type-Options Header Missing
+        - Timestamp Disclosure - Unix
 4. [References](#reference)
 
 ## List of Figures
