@@ -58,7 +58,7 @@
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li>Server OS and Server-Side Scripting used<a id="server"></a></i><br>
+<li>Server OS and Server-Side Scripting used<a id="server"></a></i> <br>
 
 <ol>
 
@@ -72,9 +72,10 @@
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details. |
 </ol>
 
-<li>Hash Disclosure <a id="hash"></a></li>
+<li>Hash Disclosure <a id="hash"></a></li><br>
 
 <ol>
+
 <li> N/A </li><br>
 
 
@@ -84,6 +85,7 @@
 <li>CSRF <a id="csrf"></a><li><br>
 
 <ol>
+
 <li>Absence of Anti-CSRF Tokens</li><br>
 
 |       	| Description      	|
