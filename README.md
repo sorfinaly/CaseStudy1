@@ -58,7 +58,7 @@
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li>Server OS and Server-Side Scripting used<a id="server"></a></i>
+<li>Server OS and Server-Side Scripting used<a id="server"></a></i><br>
 
 <ol>
 
@@ -67,8 +67,7 @@
 |       	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	| 	
-The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to. 	<br><br>**Evidence** <br><br> Content-Type: text/plain <br>Cross-Origin-Resource-Policy: cross-origin<br>**Server: Golfe2**<br>Content-Length: 2|
+| Identify 	| The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to. 	<br><br>**Evidence** <br><br> Content-Type: text/plain <br>Cross-Origin-Resource-Policy: cross-origin<br>**Server: Golfe2**<br>Content-Length: 2|
 | Evaluate 	| Risk: Low <br> Confidence:     High    	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details. |
 </ol>
@@ -82,7 +81,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 </ol>
 
-<li>CSRF <a id="csrf"></a><li>
+<li>CSRF <a id="csrf"></a><li><br>
 
 <ol>
 <li>Absence of Anti-CSRF Tokens</li><br>
@@ -114,7 +113,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 </ol>
 
-<li>Secured Cookies <a id="securedcookie"></a></li>
+<li>Secured Cookies <a id="securedcookie"></a></li><br>
 
 <ol>
 <li>Session ID in URL Rewrite</li><br>
@@ -130,7 +129,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 |       	| Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: n/a <br>WASC id : n/a     	|
+| Alert    	| CWE id: N/A <br>WASC id : N/A     	|
 | Identify 	| The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as "proxy" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. 	<br><br>**Evidence** <br><br> expires: Tue, 09 Apr 2024 21:12:36 GMT <br>last-modified: Tue, 02 Nov 2021 10:02:33 GMT<br>vary: Accept-Encoding <br> CF-Cache-Status: HIT <br> **Age: 7180** <br>Accept-Ranges: bytes <br>Server: cloudflare <br>CF-RAY: 8812a64049e99f8c-SIN Age: 14867 ... <br><br>The presence of the 'Age' in the response header indicates that that a HTTP/1.1 compliant caching server is in use.|
 | Evaluate 	| Risk: Informational <br> Confidence:   Medium      	|
 | Prevent  	| Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user: <br><br>Cache-Control: no-cache, no-store, must-revalidate, private <br><br>Pragma: no-cache<br><br>Expires: 0 <br><br>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. |
@@ -141,12 +140,12 @@ The web/application server is leaking version information via the "Server" HTTP 
 |----------	|----------------------------------	|
 | Alert    	| CWE id:565 <br>WASC id :  	15     	|
 | Identify 	| Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.	<br><br>**Evidence** <br><br> The origin domain used for comparison was: googleads.g.doubleclick.net test_cookie=CheckForPermission|
-| Evaluate 	| Risk:  <br> Confidence:         	|
+| Evaluate 	| Risk: 565 <br> Confidence:   Low      	|
 | Prevent  	| Always scope cookies to a FQDN (Fully Qualified Domain Name). |
 
 </ol>
 
-<li>CSP <a id="csp"></a></li>
+<li>CSP <a id="csp"></a></li><br>
 <ol>
 <li>Content Security Policy (CSP) Header Not Set </li><br>
 
@@ -170,7 +169,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 </ol>
 
-<li>JS Library <a id="js"></a> </li>
+<li>JS Library <a id="js"></a> </li><br>
 
 <ol>
 <li>Cross-Domain JavaScript Source File Inclusion</li><br>
@@ -187,7 +186,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id:  829 <br>WASC id : (n/a)      	|
+| Alert    	| CWE id:  829 <br>WASC id : N/A     	|
 | Identify 	| The identified library jquery-ui, version 1.12.1 is vulnerable. 	<br><br>**Evidence** <br><br> /*! jQuery UI - v1.12.1 |
 | Evaluate 	| Risk: Medium <br> Confidence:    Medium     	|
 | Prevent  	| Please upgrade to the latest version of jquery-ui. |
@@ -195,7 +194,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 </ol>
 
-<li>HTTPS Implementation <a id="https"></a> </li>
+<li>HTTPS Implementation <a id="https"></a> </li><br>
 
 <ol>
 <li>Strict-Transport-Security Header Not Set</li><br>
@@ -203,13 +202,22 @@ The web/application server is leaking version information via the "Server" HTTP 
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 315 <br>WASC id : 15      	|
-| Identify 	| HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797. 	<br><br>**Evidence** <br><br> |
+| Identify 	| HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797. 	 |
 | Evaluate 	| Risk: Low <br> Confidence: High        	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security. |
 
 </ol>
 
-<li>Cookie Poisoning <a id="cookiepoison"></a> </li>
+<li>Cookie Poisoning <a id="cookiepoison"></a> </li><br>
+
+<ol>
+<li>N/A</li><br>
+
+
+
+</ol>
+
+<li>Potential XSS <a id="xss"></a> </li><br>
 
 <ol>
 <li></li><br>
@@ -223,21 +231,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 </ol>
 
-<li>Potential XSS <a id="xss"></a> </li>
-
-<ol>
-<li></li><br>
-
-|    	    | Description      	|
-|----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br><br>**Evidence** <br><br> |
-| Evaluate 	| Risk:  <br> Confidence:         	|
-| Prevent  	|  |
-
-</ol>
-
-<li>Information Disclosure <a id="info"></a> </li>
+<li>Information Disclosure <a id="info"></a> </li><br>
 <ol>
 <li>Suspicious Comments</li><br>
 
@@ -252,7 +246,7 @@ The web/application server is leaking version information via the "Server" HTTP 
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
+| Alert    	| CWE id:200 <br>WASC id :   13    	|
 | Identify 	|  The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment. <br><br>**Evidence** <br><br> The URL appears to contain credit card information. <br> https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117 |
 | Evaluate 	| Risk: Informational <br> Confidence:  Medium      	|
 | Prevent  	| Do not pass sensitive information in URIs. |
