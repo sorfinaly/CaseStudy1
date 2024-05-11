@@ -58,7 +58,7 @@
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li>Server OS and Server-Side Scripting used<a id="server"></a></i> <br>
+<li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
 
 <ol>
 
@@ -66,7 +66,7 @@
 
 |       	| Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
+| Alert    	| CWE id:200 <br>WASC id : 13      	|
 | Identify 	| The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to. 	<br><br>**Evidence** <br><br> Content-Type: text/plain <br>Cross-Origin-Resource-Policy: cross-origin<br>**Server: Golfe2**<br>Content-Length: 2|
 | Evaluate 	| Risk: Low <br> Confidence:     High    	|
 | Prevent  	| Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details. |
@@ -82,8 +82,7 @@
 
 </ol>
 
-<li>CSRF <a id="csrf"></a><li><br>
-
+<li>CSRF <a id="csrf"></a></li><br>
 <ol>
 
 <li>Absence of Anti-CSRF Tokens</li><br>
@@ -270,7 +269,6 @@
 | Identify 	| The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing. 	<br><br>**Evidence** <br><br> This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.<br> GET https://www.airselangor.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2 |
 | Evaluate 	| Risk: Low <br> Confidence: Medium        	|
 | Prevent  	|Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages. If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing. |
-</ol>
 
 <li>Timestamp Disclosure - Unix</li><br>
 
@@ -281,6 +279,7 @@
 | Evaluate 	| Risk: Low <br> Confidence: Low        	|
 | Prevent  	| Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns. |
 
+</ol>
 </ol>
 
 ## 6. References <a id="reference"></a>
