@@ -60,11 +60,12 @@
 
 
 ## 1. Brief Description of Air Selangor <a id="brief"></a>
-<li>Syarikat Bekalan Air Selangor (SYABAS) is the water supply company responsible for providing treated water to Selangor, Kuala Lumpur, and Putrajaya in Malaysia. It manages the treatment and distribution of water to households, businesses, and industries in the region. SYABAS ensures the availability of clean and safe water for consumption, sanitation, and various other purposes. It also manages projects to improve water infrastructure and efficiency to meet the growing demands of the population.</li><br>
+Syarikat Bekalan Air Selangor (SYABAS) is the water supply company responsible for providing treated water to Selangor, Kuala Lumpur, and Putrajaya in Malaysia. It manages the treatment and distribution of water to households, businesses, and industries in the region. SYABAS ensures the availability of clean and safe water for consumption, sanitation, and various other purposes. It also manages projects to improve water infrastructure and efficiency to meet the growing demands of the population.<br>
 
 ## 2. Objectives of the Case Study <a id="objective"></a>
 The objective of this case study is to identify, evaluate, and provide solutions to the vulnerabilities that exist on the Air Selangor website.
-The alerts that need to be observe are:
+
+The alerts that need to be observed are:
 1. Server OS and Server-Side Scripting used
 2. Hash Disclosure
 3. CSRF
