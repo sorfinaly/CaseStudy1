@@ -335,7 +335,7 @@ The alerts that need to be observed are:
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id:359 <br>WASC id : 13      	|
-| Identify 	|  The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data	<br><br>**Evidence** <br><br> 500 667 556 833 722|
+| Identify 	|  The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data	<br><br>**Evidence** <br><br> 376574821370814 found in </image:loc>https://www.airselangor.com/wp-content/upload/elementor/thumbs/3985444548_376574821370814_313752166118313748_n-qfff4di9rre33x5uf18b31k1j7cjvuaca3syssmhmg.jpg</image:loc>|
 | Evaluate 	| Risk: High <br> Confidence: Medium        	|
 | Prevent  	| Check the response for the potential presence of personally identifiable information(PII), ensure nothing sensitive is leaked by the application . |
 
