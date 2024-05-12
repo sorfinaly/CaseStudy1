@@ -299,6 +299,15 @@ The alerts that need to be observed are:
 | Evaluate 	| Risk: Low <br> Confidence: Low        	|
 | Prevent  	| Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns. |
 
+<li>PII Disclosure</li><br>
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id:359 <br>WASC id : 13      	|
+| Identify 	|  The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data	<br><br>**Evidence** <br><br> 500 667 556 833 722|
+| Evaluate 	| Risk: High <br> Confidence: Medium        	|
+| Prevent  	| Check the response for the potential presence of personally identifiable information(PII), ensure nothing sensitive is leaked by the application . |
+
 </ol>
 </ol>
 
