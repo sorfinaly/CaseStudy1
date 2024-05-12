@@ -1,7 +1,6 @@
 # Case Study 1 Report
 
-## i. Group Name
-- Group Name: Blue
+## i. Group Name: Blue
 
 ## ii. Group Member Details
 1. **Nadirah Binti Ros Liza** - Matric No: 2027832
@@ -64,7 +63,18 @@
 <li>Syarikat Bekalan Air Selangor (SYABAS) is the water supply company responsible for providing treated water to Selangor, Kuala Lumpur, and Putrajaya in Malaysia. It manages the treatment and distribution of water to households, businesses, and industries in the region. SYABAS ensures the availability of clean and safe water for consumption, sanitation, and various other purposes. It also manages projects to improve water infrastructure and efficiency to meet the growing demands of the population.</li><br>
 
 ## 2. Objectives of the Case Study <a id="objective"></a>
-<li>The objective of this case study is to identify, evaluate, and provide solutions to the vulnerabilities that exist on the Air Selangor website.</li><br>
+The objective of this case study is to identify, evaluate, and provide solutions to the vulnerabilities that exist on the Air Selangor website.
+The alerts that need to be observe are:
+1. Server OS and Server-Side Scripting used
+2. Hash Disclosure
+3. CSRF
+4. Secured Cookies
+5. CSP
+6. JS Library
+7. HTTPS implementation
+8. Cookie Poisoning
+9. Potential XSS
+10. Information Disclosure<br>
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
