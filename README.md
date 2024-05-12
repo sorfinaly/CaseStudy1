@@ -41,9 +41,10 @@
     - [HTTPS Implementation](#https)
         - Strict-Transport-Security Header Not Set
 
-    - [Cookie Poisoning](#cookiepoison)
-          - Cookie No HTTPOnly Flag
-          - Cookie Without Secure Flag
+   - [Cookie Poisoning](#cookiepoison)
+        - Cookie no HTTPOnly Flag
+        - Cookie without Secure Flag 
+
     - [Potential XSS](#xss)
     - [Information Disclosure](#info)
         - Suspicious Comments
