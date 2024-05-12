@@ -48,6 +48,7 @@
         - Re-examine Cache-control Directives
         - X-Content-Type-Options Header Missing
         - Timestamp Disclosure - Unix
+        - PII Disclosure
 4. [References](#reference)
 
 ## List of Figures
