@@ -78,7 +78,7 @@ j. Information Disclosure<br>
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li> ### Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
+<li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
 
 <ol>
 
@@ -237,12 +237,15 @@ j. Information Disclosure<br>
 <li>Cookie Poisoning <a id="cookiepoison"></a> </li><br>
 
 <ol>
-|       	| Description      	|
+<li></li><br>
+
+|    	    | Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: 565 <br>WASC id : 20      	|
-| Identify 	| This check looks at user-supplied input in query string parameters and POST data to identify where cookie parameters might be controlled. An attacker may be able to poison cookie values through URL parameters by injecting a semicolon to see if they can add cookie values (e.g. name=controlledValue;name=anotherValue;). This was identified at: https://example.com/transact User-input was found in the following cookie: value=poison; SameSite=Strict The user input was: place=poison |
-| Evaluate 	| Risk: Informational	|
-| Prevent  	| Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters. |
+| Alert    	| CWE id: 565 <br>WASC id : 20       	|
+| Identify 	| This check looks at user-supplied input in query string parameters and POST data to identify where ookie parameters might be controlled. An attacker may be able to poison cookie values through URL parameters by injecting a semicolon to see if they can add cookie values, example: name=controlledValue;name=anotherValue;<br>
+This was identified at: https://example.com/transact <br>User-input was found in the following cookie: value=poison; SameSite=Strict The user input was: place=poison <br>|
+| Evaluate 	| Risk: Informational <br>    	|
+| Prevent  	| Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters.  |
 
 </ol>
 
