@@ -78,7 +78,7 @@ j. Information Disclosure<br>
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-### <li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
+<li> ### Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
 
 <ol>
 
