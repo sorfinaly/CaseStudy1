@@ -64,7 +64,7 @@ Syarikat Bekalan Air Selangor (SYABAS) is the water supply company responsible f
 
 ## 2. Objectives of the Case Study <a id="objective"></a>
 The objective of this case study is to evaluate and address the vulnerabilities found on the Air Selangor website. We aim to identify any flaws that could jeopardize the website's security through extensive analysis by using the OWASP ZAP scan. By examining these vulnerabilities, we can determine the level of risk and impact. This allows us to prioritize remedies in order to minimize risks while ensuring the dependability and integrity of Air Selangor's website in providing water services to the community.
-The alerts that need to be observed are:
+The vulnerablities that need to be observed are:
 1. Server OS and Server-Side Scripting used
 2. Hash Disclosure
 3. CSRF
