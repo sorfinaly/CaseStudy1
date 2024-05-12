@@ -339,6 +339,6 @@ The alerts that need to be observed are:
 
 ## 6. References <a id="reference"></a>
 <ol>
-    ZAP Documentation. Retrieved on 9 May 2024 from [https://www.zaproxy.org/docs/alerts/10029/](https://www.zaproxy.org/)<br>
-    OWASP Cheat Sheet Series. Retrieved on 9 May 2024 from https://cheatsheetseries.owasp.org/<br>
+    - ZAP Documentation. Retrieved on 9 May 2024 from [https://www.zaproxy.org/docs/alerts/10029/](https://www.zaproxy.org/)<br>
+    - OWASP Cheat Sheet Series. Retrieved on 9 May 2024 from https://cheatsheetseries.owasp.org/<br>
 </ol>
