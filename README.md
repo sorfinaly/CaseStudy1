@@ -232,7 +232,17 @@ The alerts that need to be observed are:
 <li>Cookie Poisoning <a id="cookiepoison"></a> </li><br>
 
 <ol>
-<li>N/A</li><br>
+<li><ol>
+<li>Cookie No HTTPOnly Flag</li><br>
+
+|       	| Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 1004 <br>WASC id : 13      	|
+| Identify 	|  	<br>A cookie has been set without the HTTPOnly flag, which means that the cookie can be accessed b Javascript. If a malicious script can be run on the page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.<br>**Evidence** <br>set-cookie: PHPSESSID<br> |
+| Evaluate 	| Risk: Low <br> Confidence: Medium        	|
+| Prevent  	|  Ensure that HTTPOnly flag is set for all cookies.|
+
+</ol></li><br>
 
 
 
@@ -241,14 +251,15 @@ The alerts that need to be observed are:
 <li>Potential XSS <a id="xss"></a> </li><br>
 
 <ol>
-<li></li><br>
+<li>User Controllable HTML Element Attribute (Potential XSS)</li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br><br>**Evidence** <br><br> |
-| Evaluate 	| Risk:  <br> Confidence:         	|
-| Prevent  	|  |
+| Alert    	| CWE id: 20 <br>WASC id : 20       	|
+| Identify 	|  	<br>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for cross-site scripting (XSS) that will require further review by a security analyst to determine exploitability. 
+<br>**Evidence** <br><br> |
+| Evaluate 	| Risk: Informational <br> Confidence: Low         	|
+| Prevent  	| Validate all input and sanitize output before writing to any HTML attributes.  |
 
 </ol>
 
