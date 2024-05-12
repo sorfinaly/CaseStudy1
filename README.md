@@ -6,8 +6,8 @@
 
 | Name           | Task                 |
 |----------------|----------------------|
-| Nadirah Binti Ros Liza (2027832)       | Automated Scan, Description, Objective, Hash Disclosure, Secured Cookies, JS Library, Cookie Poisoning, Information Disclosure.               |
-| Sorfina Alyia Binti Jazrry (2017326)       | Manual Explore, Server OS and Server-Side Scripting used, CSRF, CSP, HTTPS implementation, Potential XSS.               |
+| Nadirah Binti Ros Liza (2027832)       | Hash Disclosure, Secured Cookies, JS Library, Cookie Poisoning, Potential XSS.               |
+| Sorfina Alyia Binti Jazrry (2017326)       | Server OS and Server-Side Scripting used, CSRF, CSP, HTTPS implementation, Information Disclosure.               |
 
 # Table of Contents
 
