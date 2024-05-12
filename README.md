@@ -322,6 +322,6 @@ j. Information Disclosure<br>
 
 ## 6. References <a id="reference"></a>
 <li>
-    - ZAP Documentation Retrieved on 9 May 2024 from [https://www.zaproxy.org/docs/alerts/10029/](https://www.zaproxy.org/) 
-    - 
+    ZAP Documentation. Retrieved on 9 May 2024 from [https://www.zaproxy.org/docs/alerts/10029/](https://www.zaproxy.org/)<br>
+    OWASP Cheat Sheet Series. Retrieved on 9 May 2024 from https://cheatsheetseries.owasp.org/<br>
 </li>
