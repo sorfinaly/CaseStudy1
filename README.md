@@ -94,9 +94,14 @@ The alerts that need to be observed are:
 
 <li>Hash Disclosure <a id="hash"></a></li><br>
 
-<ol>
-
-<li> N/A </li><br>
+<ol> 
+    
+|       	| Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 200<br>WASC id : 13      	|
+| Identify 	|  	A hash was disclosed by the web server. - MD4 / MD5 <br>|
+| Evaluate 	| Risk:  Low <br>	|
+| Prevent  	|  Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser.|
 
 
 
@@ -238,12 +243,27 @@ The alerts that need to be observed are:
 |       	| Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 1004 <br>WASC id : 13      	|
-| Identify 	|  	<br>A cookie has been set without the HTTPOnly flag, which means that the cookie can be accessed b Javascript. If a malicious script can be run on the page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.<br>**Evidence** <br>set-cookie: PHPSESSID<br> |
+| Identify 	| A cookie has been set without the HTTPOnly flag, which means that the cookie can be accessed b Javascript. If a malicious script can be run on the page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.<br>**Evidence** <br>set-cookie: PHPSESSID<br> |
 | Evaluate 	| Risk: Low <br> Confidence: Medium        	|
 | Prevent  	|  Ensure that HTTPOnly flag is set for all cookies.|
 
-</ol></li><br>
+<li>Cookie without Secure Flag</li><br>
 
+|       	| Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 614<br>WASC id : 13      	|
+| Identify 	| A cookie has been set without a secure flag, which means that the cookie can be accessed via unencrypted connections.<br>**Evidence** <br>set-cookie: PHPSESSID<br> |
+| Evaluate 	| Risk: Low <br> Confidence: Medium        	|
+| Prevent  	| Whenever a cookie contains sensitive information or a session token, then it should always be passed by using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information. |
+
+<li>Cookie without Same Site Attribute</li><br>
+
+|       	| Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 1275 <br>WASC id : 13      	|
+| Identify 	|  	A cookie has been set without the SameSite Attribute means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion and timing attacks.<br>**Evidence** <br>set-cookie: PHPSESSID<br> |
+| Evaluate 	| Risk:  Low<br> Confidence: Medium        	|
+| Prevent  	|  Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies. |
 
 
 </ol>
