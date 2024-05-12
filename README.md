@@ -2,16 +2,12 @@
 
 ## Group Name: Blue
 
-## Group Member Details
-1. **Nadirah Binti Ros Liza** - Matric No: 2027832
-2. **Sorfina Alyia Binti Jazrry** - Matric No: 2017326
-
-## Assigned Tasks
+## Group Member and Assigned Tasks Details
 
 | Name           | Task                 |
 |----------------|----------------------|
-| Nadirah        | Task 1               |
-| Sorfina        | Task 2               |
+| Nadirah Binti Ros Liza (2027832)       | Automated Scan, Description, Objective, Hash Disclosure, Secured Cookies, JS Library, Cookie Poisoning, Information Disclosure.               |
+| Sorfina Alyia Binti Jazrry (2017326)       | Manual Explore, Server OS and Server-Side Scripting used, CSRF, CSP, HTTPS implementation, Potential XSS.               |
 
 # Table of Contents
 
@@ -68,16 +64,16 @@ Syarikat Bekalan Air Selangor (SYABAS) is the water supply company responsible f
 ## 2. Objectives of the Case Study <a id="objective"></a>
 The objective of this case study is to evaluate and address the vulnerabilities found on the Air Selangor website. We aim to identify any flaws that could jeopardize the website's security through extensive analysis by using the OWASP ZAP scan. By examining these vulnerabilities, we can determine the level of risk and impact. This allows us to prioritize remedies in order to minimize risks while ensuring the dependability and integrity of Air Selangor's website in providing water services to the community.
 The alerts that need to be observed are:
-a. Server OS and Server-Side Scripting used
-b. Hash Disclosure
-c. CSRF
-d. Secured Cookies
-e. CSP
-f. JS Library
-g. HTTPS implementation
-h. Cookie Poisoning
-i. Potential XSS
-j. Information Disclosure<br>
+1. Server OS and Server-Side Scripting used
+2. Hash Disclosure
+3. CSRF
+4. Secured Cookies
+5. CSP
+6. JS Library
+7. HTTPS implementation
+8. Cookie Poisoning
+9. Potential XSS
+10. Information Disclosure<br>
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
