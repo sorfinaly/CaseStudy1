@@ -1,12 +1,12 @@
 # Case Study 1 Report
 
-## i. Group Name: Blue
+## Group Name: Blue
 
-## ii. Group Member Details
+## Group Member Details
 1. **Nadirah Binti Ros Liza** - Matric No: 2027832
 2. **Sorfina Alyia Binti Jazrry** - Matric No: 2017326
 
-## iii. Assigned Tasks
+## Assigned Tasks
 
 | Name           | Task                 |
 |----------------|----------------------|
@@ -65,20 +65,20 @@ Syarikat Bekalan Air Selangor (SYABAS) is the water supply company responsible f
 ## 2. Objectives of the Case Study <a id="objective"></a>
 The objective of this case study is to evaluate and address the vulnerabilities found on the Air Selangor website. We aim to identify any flaws that could jeopardize the website's security through extensive analysis by using the OWASP ZAP scan. By examining these vulnerabilities, we can determine the level of risk and impact. This allows us to prioritize remedies in order to minimize risks while ensuring the dependability and integrity of Air Selangor's website in providing water services to the community.
 The alerts that need to be observed are:
-1. Server OS and Server-Side Scripting used
-2. Hash Disclosure
-3. CSRF
-4. Secured Cookies
-5. CSP
-6. JS Library
-7. HTTPS implementation
-8. Cookie Poisoning
-9. Potential XSS
-10. Information Disclosure<br>
+a. Server OS and Server-Side Scripting used
+b. Hash Disclosure
+c. CSRF
+d. Secured Cookies
+e. CSP
+f. JS Library
+g. HTTPS implementation
+h. Cookie Poisoning
+i. Potential XSS
+j. Information Disclosure<br>
 
 ## 3. Vulnerablities <a id="vuln"></a>
 <ol>
-<li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
+### <li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
 
 <ol>
 
@@ -187,7 +187,7 @@ The alerts that need to be observed are:
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 1021 <br>WASC id : 15       	|
-| Identify 	| The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks. 	<br><br>**Evidence** <br><br> |
+| Identify 	| The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks. 	<br> |
 | Evaluate 	| Risk: Medium <br> Confidence: Medium        	|
 | Prevent  	| Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app. If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive. |
 
@@ -237,24 +237,12 @@ The alerts that need to be observed are:
 <li>Cookie Poisoning <a id="cookiepoison"></a> </li><br>
 
 <ol>
-<li><ol>
-<li>Cookie No HTTPOnly Flag</li><br>
-
 |       	| Description      	|
 |----------	|----------------------------------	|
-| Alert    	| CWE id: 1004 <br>WASC id : 13      	|
-| Identify 	| A cookie has been set without the HTTPOnly flag, which means that the cookie can be accessed b Javascript. If a malicious script can be run on the page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.<br>**Evidence** <br>set-cookie: PHPSESSID=mnbseevnqh4r62o6atqoi7aq86; path=/<br> |
-| Evaluate 	| Risk: Low <br> Confidence: Medium        	|
-| Prevent  	|  Ensure that HTTPOnly flag is set for all cookies.|
-
-<li>Cookie without Secure Flag</li><br>
-
-|       	| Description      	|
-|----------	|----------------------------------	|
-| Alert    	| CWE id: 614<br>WASC id : 13      	|
-| Identify 	| A cookie has been set without a secure flag, which means that the cookie can be accessed via unencrypted connections.<br>**Evidence** <br>set-cookie: PHPSESSID=mnbseevnqh4r62o6atqoi7aq86; path=/<br> |
-| Evaluate 	| Risk: Low <br> Confidence: Medium        	|
-| Prevent  	| Whenever a cookie contains sensitive information or a session token, then it should always be passed by using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information. |
+| Alert    	| CWE id: 565 <br>WASC id : 20      	|
+| Identify 	| This check looks at user-supplied input in query string parameters and POST data to identify where cookie parameters might be controlled. An attacker may be able to poison cookie values through URL parameters by injecting a semicolon to see if they can add cookie values (e.g. name=controlledValue;name=anotherValue;). This was identified at: https://example.com/transact User-input was found in the following cookie: value=poison; SameSite=Strict The user input was: place=poison |
+| Evaluate 	| Risk: Informational	|
+| Prevent  	| Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters. |
 
 </ol>
 
@@ -266,8 +254,7 @@ The alerts that need to be observed are:
 |    	    | Description      	|
 |----------	|----------------------------------	|
 | Alert    	| CWE id: 20 <br>WASC id : 20       	|
-| Identify 	|  	<br>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for cross-site scripting (XSS) that will require further review by a security analyst to determine exploitability. 
-<br> |
+| Identify 	| This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for cross-site scripting (XSS) that will require further review by a security analyst to determine exploitability. <br>|
 | Evaluate 	| Risk: Informational <br> Confidence: Low         	|
 | Prevent  	| Validate all input and sanitize output before writing to any HTML attributes.  |
 
@@ -333,16 +320,7 @@ The alerts that need to be observed are:
 </ol>
 
 ## 6. References <a id="reference"></a>
-
-# template
-<ol>
-<li></li><br>
-
-|       	| Description      	|
-|----------	|----------------------------------	|
-| Alert    	| CWE id: <br>WASC id :       	|
-| Identify 	|  	<br><br>**Evidence** <br><br> |
-| Evaluate 	| Risk:  <br> Confidence:         	|
-| Prevent  	|  |
-
-</ol>
+<li>
+    - ZAP Documentation Retrieved on 9 May 2024 from [https://www.zaproxy.org/docs/alerts/10029/](https://www.zaproxy.org/) 
+    - 
+</li>
