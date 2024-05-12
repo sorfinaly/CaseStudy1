@@ -42,6 +42,8 @@
         - Strict-Transport-Security Header Not Set
 
     - [Cookie Poisoning](#cookiepoison)
+          - Cookie No HTTPOnly Flag
+          - Cookie Without Secure Flag
     - [Potential XSS](#xss)
     - [Information Disclosure](#info)
         - Suspicious Comments
@@ -244,6 +246,24 @@ j. Information Disclosure<br>
 | Identify 	| This check looks at user-supplied input in query string parameters and POST data to identify where ookie parameters might be controlled. An attacker may be able to poison cookie values through URL parameters by injecting a semicolon to see if they can add cookie values, example: name=controlledValue;name=anotherValue; This was identified at: https://example.com/transact <br>User-input was found in the following cookie: value=poison; SameSite=Strict The user input was: place=poison <br>|
 | Evaluate 	| Risk: Informational <br>    	|
 | Prevent  	| Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters.  |
+
+<li>Cookie No HTTPOnly Flag</li><br>
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 1004 <br>WASC id : 13       	|
+| Identify 	| A cookie has been set without HTTPOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.<br><br> **Evidence**<br><br> set-cookie: PHPSESSID=mbseevnqh4r62o6atqoi7aq86; path=/ expires: Thu 19 Nov 1981 08:52:00 GMT |
+| Evaluate 	| Risk: Low <br> Confidence: Medium   	|
+| Prevent  	| Ensure that the HttpOnly Flag is set for all cookies.  |
+
+<li>Cookie without Secure Flag</li><br>
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id: 614 <br>WASC id : 13       	|
+| Identify 	| A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.<br><br> **Evidence**<br><br> set-cookie: PHPSESSID=mbseevnqh4r62o6atqoi7aq86; path=/ expires: Thu 19 Nov 1981 08:52:00 GMT |
+| Evaluate 	| Risk: Low <br> Confidence: Medium   	|
+| Prevent  	| Whenever a cookie contains sensitive information or a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.  |
 
 </ol>
 
