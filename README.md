@@ -16,9 +16,32 @@ https://docs.google.com/document/d/18zuezQdxdGFEfFavxT6dwwdauvNZAESp3iTG4NXIn_0/
 
 | Name           |    
 |----------------|
-| [Server OS and Server-Side Scripting used](#t1)    | 
-| Hash Disclosure    | 
-| (#)|
+| [Table 1: Server OS and Server-Side Scripting used](#t1)    | 
+| [Table 2: Hash Disclosure](#t2)    | 
+| [Table 3: Absence of Anti-CSRF Tokens](#t)|
+| [Table 4: Cookie with SameSite Attribute None](#t)|
+| [Table 5: Cross-Domain Misconfiguration](#t5)|
+| [Table 6: Session ID in URL Rewrite](#t6)|
+| [Table 7: Retrieved from Cache](#t7)|
+| [Table 8: Loosely Scoped Cookie](#t8)|
+| [Table 9: Content Security Policy (CSP) Header Not Set](#t9)|
+| [Table 10: Missing Anti-clicking Header](#t10)|
+| [Table 11: Vulnerable JS LIbrary](#t11)|
+| [Table 12: Cross-Domain JavaScript Source File Inclusion](#t12)|
+| [Table 13: Strict-Transport-Security Header Not Set](#t13)|
+| [Table 14: Cookie Poisoning](#t14)|
+| [Table 15: Cookie no HTTPOnly Flag](#t15)|
+| [Table 16: Cookie without Secure Flag](#t16)|
+| [Table 17 User Controllable HTML Element Attribute](#t17)|
+| [Table 18: PII Disclosure](#t18)|
+| [Table 19 Suspicious Comments](#t19)|
+| [Table 20: Sensitive Information in URL](#t20)|
+| [Table 21: Re-examine Cache-control Directives](#t21)|
+| [Table 22: X-Content-Type-Options Header Missing](#t22)|
+| [Table 23: Timestamp Disclosure - Unix](#t23)|
+
+
+
 
 # Table of Contents
 
@@ -101,7 +124,7 @@ Therefore, the result we obtained from both scanning, we concluded into table be
 
 <ol>
 
-<li>Server Leaks Version Information via "Server" HTTP Response Header Field</li><br>
+<li>Server Leaks Version Information via "Server" HTTP Response Header Field</li><a id="t1"></a><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -110,9 +133,9 @@ Therefore, the result we obtained from both scanning, we concluded into table be
 | Evaluate 	| Risk: Low <br> Confidence:     High    	|
 | Prevention  	| Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details. |
 </ol>
-<h4 align="center">Table 1<a id="t1"></a></h4>
+<h4 align="center">Table 1</h4>
 
-<li>Hash Disclosure <a id="hash"></a></li><br>
+<li>Hash Disclosure <a id="hash"></a><a id="t2"></a></li><br>
 
 <ol> 
     
@@ -128,7 +151,7 @@ Therefore, the result we obtained from both scanning, we concluded into table be
 <li>CSRF <a id="csrf"></a></li><br>
 <ol>
 
-<li>Absence of Anti-CSRF Tokens</li><br>
+<li>Absence of Anti-CSRF Tokens <a id="t2"></a><</li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -136,7 +159,7 @@ Therefore, the result we obtained from both scanning, we concluded into table be
 | Identify 	|  No Anti-CSRF tokens were found in a HTML submission form. <br><br> A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.<br><br>CSRF attacks are effective in a number of situations, including:<br><br>* The victim has an active session on the target site.<br><br>* The victim is authenticated via HTTP auth on the target site.<br><br>* The victim is on the same local network as the target site.<br><br>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy. <br><br>**Evidence** <br><br> form data-sf-form-id="7462" data-is-rtl="0" data-maintain-state data-results-url="https://www.airselangor.com/?sfid=7462" data-ajax-form-url="https://www.airselangor.com/?sfid=7462&amp;sf_action=get_data&amp;sf_data=form" data-display-result-method="archive" data-use-history-api="1" data-template-loaded="0" data-lang-code="en" data-ajax="0" data-init-paged="1" data-auto-update="1" action="https://www.airselangor.com/?sfid=7462" method="post" class="searchandfilter" id="search-filter-form-7462" autocomplete="off" data-instance-count="2"><br><br>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: "_sf_search[]" ]. |
 | Evaluate 	| Risk:  Medium<br> Confidence: Low         	|
 | Prevention  	| Phase: Architecture and Design<br><br>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid <br><br>For example, use anti-CSRF packages such as the OWASP CSRFGuard.<br><br>Phase: Implementation<br><br>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.<br><br>Phase: Architecture and Design<br><br>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).<br><br>Note that this can be bypassed using XSS.<br><br>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.<br><br>Note that this can be bypassed using XSS.<br><br>Use the ESAPI Session Management control.<br><br>This control includes a component for CSRF.<br><br>Do not use the GET method for any request that triggers a state change.<br><br>Phase: Implementation<br><br>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.|
-<h4 align="center">Table 3</h4>
+<h4 align="center">Table 3 </h4>
 
 <li>Cookie with SameSite Attribute None</li><br>
 
