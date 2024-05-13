@@ -33,8 +33,8 @@
         - Missing Anti-clicking Header
 
     - [JS Library](#js)
-        - Cross-Domain JavaScript Source File Inclusion
         - Vulnerable JS LIbrary 
+        - Cross-Domain JavaScript Source File Inclusion
 
     - [HTTPS Implementation](#https)
         - Strict-Transport-Security Header Not Set
@@ -47,12 +47,13 @@
         - User Controllable HTML Element Attribute
 
     - [Information Disclosure](#info)
+        - PII Disclosure
         - Suspicious Comments
         - Sensitive Information in URL
         - Re-examine Cache-control Directives
         - X-Content-Type-Options Header Missing
         - Timestamp Disclosure - Unix
-        - PII Disclosure
+        
 4. [References](#reference)
 
 ## List of Figures
@@ -202,7 +203,6 @@ The vulnerablities that need to be observed are:
 <li>JS Library <a id="js"></a> </li><br>
 
 <ol>
-<li>Cross-Domain JavaScript Source File Inclusion</li><br>
 
 <li>Vulnerable JS LIbrary </li><br>
 
@@ -212,6 +212,8 @@ The vulnerablities that need to be observed are:
 | Identify 	| The identified library jquery-ui, version 1.12.1 is vulnerable. 	<br><br>**Evidence** <br><br> /*! jQuery UI - v1.12.1 |
 | Evaluate 	| Risk: Medium <br> Confidence:    Medium     	|
 | Prevention  	| Please upgrade to the latest version of jquery-ui. |
+
+<li>Cross-Domain JavaScript Source File Inclusion</li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
