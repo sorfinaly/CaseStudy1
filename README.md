@@ -82,6 +82,11 @@ The vulnerablities that need to be observed are:
 10. Information Disclosure<br>
 
 ## 3. Vulnerablities <a id="vuln"></a>
+Based on the results from both automated scanning and manual exploration of the website, we identified alerts regarding related vulnerabilities that need attention. We also included evidence and prevention as solutions to mitigate the risk in order to make the website more secure in the future.
+
+<img src="./images/alert.png" width="40%">
+
+
 <ol>
 <li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
 
