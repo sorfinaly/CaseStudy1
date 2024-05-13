@@ -84,7 +84,6 @@ The vulnerablities that need to be observed are:
 ## 3. Vulnerablities <a id="vuln"></a>
 Based on the results from both automated scanning and manual exploration of the website, we identified alerts regarding related vulnerabilities that need attention. We also included evidence and prevention as solutions to mitigate the risk in order to make the website more secure in the future.
 
-<img src="./images/alert.png" width="40%">
 
 ![image](https://github.com/sorfinaly/CaseStudy1/assets/85787305/54a22040-f9a7-49ac-9ef8-981638315d9f)
 
