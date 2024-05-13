@@ -85,7 +85,7 @@ The vulnerablities that need to be observed are:
 Based on the results from both automated scanning and manual exploration of the website, we identified alerts regarding related vulnerabilities that need attention. We also included evidence and prevention as solutions to mitigate the risk in order to make the website more secure in the future.
 
 
-![image](https://github.com/sorfinaly/CaseStudy1/assets/85787305/54a22040-f9a7-49ac-9ef8-981638315d9f , width:40%)figure 1 shows result from manual explored
+![image](https://github.com/sorfinaly/CaseStudy1/assets/85787305/54a22040-f9a7-49ac-9ef8-981638315d9f)figure 1 shows result from manual explored
 
 <ol>
 <li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
