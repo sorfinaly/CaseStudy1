@@ -110,7 +110,7 @@ Therefore, the result we obtained from both scanning, we concluded into table be
 | Evaluate 	| Risk: Low <br> Confidence:     High    	|
 | Prevention  	| Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details. |
 </ol>
-<a id="t1"><h4 align="center">Table 1</h4></a>
+<h4 align="center">Table 1<a id="t1"></a></h4>
 
 <li>Hash Disclosure <a id="hash"></a></li><br>
 
