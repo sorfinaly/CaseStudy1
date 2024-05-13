@@ -12,6 +12,14 @@
 ## Weekly Progress Report 
 https://docs.google.com/document/d/18zuezQdxdGFEfFavxT6dwwdauvNZAESp3iTG4NXIn_0/edit?usp=sharing
 
+## Table 
+
+| Name           |    
+|----------------|
+| Server OS and Server-Side Scripting used (#t1)    | 
+| Hash Disclosure    | 
+| (#)|
+
 # Table of Contents
 
 1. [Brief Description of Air Selangor](#brief)
@@ -102,7 +110,7 @@ Therefore, the result we obtained from both scanning, we concluded into table be
 | Evaluate 	| Risk: Low <br> Confidence:     High    	|
 | Prevention  	| Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details. |
 </ol>
-<h4 align="center">Table 1</h4>
+<h4 align="center">Table 1</h4><a id="t1"></a>
 
 <li>Hash Disclosure <a id="hash"></a></li><br>
 
