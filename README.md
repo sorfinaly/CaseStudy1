@@ -11,12 +11,14 @@
 
 # Table of Contents
 
-1. [Brief](#brief)
-2. [Objective](#objective)
+1. [Brief Description of Air Selangor](#brief)
+2. [Objective of the Case Study](#objective)
 3. [Vulnerabilities](#vuln)
     - [Server OS and Server-Side Scripting](#server)
         - Server OS and Server-Side Scripting used
+
     - [Hash Disclosure](#hash)
+    
     - [CSRF](#csrf)
         - Absence of Anti-CSRF Tokens
         - Cookie with SameSite Attribute None
@@ -42,6 +44,8 @@
         - Cookie without Secure Flag 
 
     - [Potential XSS](#xss)
+        - User Controllable HTML Element Attribute
+
     - [Information Disclosure](#info)
         - Suspicious Comments
         - Sensitive Information in URL
