@@ -86,6 +86,7 @@ Based on the results from both automated scanning and manual exploration of the 
 
 <img src="./images/alert.png" width="40%">
 
+![image](https://github.com/sorfinaly/CaseStudy1/assets/85787305/54a22040-f9a7-49ac-9ef8-981638315d9f)
 
 <ol>
 <li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
