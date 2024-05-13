@@ -117,7 +117,7 @@ Based on the results from both automated scanning and manual exploration of the 
 
 Figure 1 shows the result of manual exploration using ZAP. Based on that, it can be inferred that medium is the most risky level. Moreover, retrieved from the cache has the highest number of instances. Nonetheless, when automated scans were carried out, one high risk level occurred: PII exposure, in which the response contained personally identifiable information such as a credit card number, Social Security number, or other sensitive data.
 
-Therefore, the result we obtained from both scanning, we concluded into table below:
+Therefore, the results we obtained from both scanning, we concluded into tables below:
 
 <ol>
 <li>Server OS and Server-Side Scripting used <a id="server"></a></li> <br>
