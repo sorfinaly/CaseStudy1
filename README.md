@@ -111,12 +111,12 @@ The vulnerablities that need to be observed are:
 9. Potential XSS
 10. Information Disclosure<br>
 
-## 3. Vulnerablities <a id="vuln"></a>
+## 3. Vulnerablities <a id="vuln"></a><a id="f1"></a>
 Based on the results from both automated scanning and manual exploration of the website, we identified alerts regarding related vulnerabilities that need attention. We also included evidence and prevention as solutions to mitigate the risk in order to make the website more secure in the future.
 
 
 ![image](https://github.com/sorfinaly/CaseStudy1/assets/85787305/54a22040-f9a7-49ac-9ef8-981638315d9f) 
-<h4 align="center">Figure 1: Alerts<a id="f1"></a></h4>
+<h4 align="center">Figure 1: Alerts</h4>
 
 Figure 1 shows the result of manual exploration using ZAP. Based on that, it can be inferred that medium is the most risky level. Moreover, retrieved from the cache has the highest number of instances. Nonetheless, when automated scans were carried out, one high risk level occurred: PII exposure, in which the response contained personally identifiable information such as a credit card number, Social Security number, or other sensitive data.
 
