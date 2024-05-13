@@ -9,6 +9,9 @@
 | Nadirah Binti Ros Liza (2027832)       | Hash Disclosure, Secured Cookies, JS Library, Cookie Poisoning, Potential XSS.               |
 | Sorfina Alyia Binti Jazrry (2017326)       | Server OS and Server-Side Scripting used, CSRF, CSP, HTTPS implementation, Information Disclosure.               |
 
+## Weekly Progress Report 
+https://docs.google.com/document/d/18zuezQdxdGFEfFavxT6dwwdauvNZAESp3iTG4NXIn_0/edit?usp=sharing
+
 # Table of Contents
 
 1. [Brief Description of Air Selangor](#brief)
