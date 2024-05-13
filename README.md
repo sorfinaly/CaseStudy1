@@ -12,9 +12,9 @@
 ## Weekly Progress Report 
 https://docs.google.com/document/d/18zuezQdxdGFEfFavxT6dwwdauvNZAESp3iTG4NXIn_0/edit?usp=sharing
 
-## Table 
+## List of Table
 
-| Name           |    
+| Table           |    
 |----------------|
 | [Table 1: Server OS and Server-Side Scripting used](#t1)    | 
 | [Table 2: Hash Disclosure](#t2)    | 
@@ -40,8 +40,11 @@ https://docs.google.com/document/d/18zuezQdxdGFEfFavxT6dwwdauvNZAESp3iTG4NXIn_0/
 | [Table 22: X-Content-Type-Options Header Missing](#t22)|
 | [Table 23: Timestamp Disclosure - Unix](#t23)|
 
+## List of Figure
 
-
+| Figure       | 
+|----------------|
+| [Figure 1: Alerts](#f1)     | 
 
 # Table of Contents
 
@@ -113,7 +116,7 @@ Based on the results from both automated scanning and manual exploration of the 
 
 
 ![image](https://github.com/sorfinaly/CaseStudy1/assets/85787305/54a22040-f9a7-49ac-9ef8-981638315d9f) 
-<h4 align="center">Figure 1</h4>
+<h4 align="center">Figure 1: Alerts<a id="f1"></a></h4>
 
 Figure 1 shows the result of manual exploration using ZAP. Based on that, it can be inferred that medium is the most risky level. Moreover, retrieved from the cache has the highest number of instances. Nonetheless, when automated scans were carried out, one high risk level occurred: PII exposure, in which the response contained personally identifiable information such as a credit card number, Social Security number, or other sensitive data.
 
