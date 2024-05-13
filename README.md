@@ -204,14 +204,6 @@ The vulnerablities that need to be observed are:
 <ol>
 <li>Cross-Domain JavaScript Source File Inclusion</li><br>
 
-|    	    | Description      	|
-|----------	|----------------------------------	|
-| Alert    	| CWE id:  829<br>WASC id : 15       	|
-| Identify 	|  The page includes one or more script files from a third-party domain	<br><br>**Evidence** <br><br> <ol><li><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js?ver=02fc163323d2ee7aa277411bbc10e1e7" id="gsap-js-js"></script></li><li><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117" crossorigin="anonymous"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=G-HC8HNVJVEZ"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150747362-1"></script></li><li><script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script></li></ol>|
-| Evaluate 	| Risk:  Low <br> Confidence:   Medium        	|
-| Prevention  	| Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application. |
-
-
 <li>Vulnerable JS LIbrary </li><br>
 
 |    	    | Description      	|
@@ -220,6 +212,15 @@ The vulnerablities that need to be observed are:
 | Identify 	| The identified library jquery-ui, version 1.12.1 is vulnerable. 	<br><br>**Evidence** <br><br> /*! jQuery UI - v1.12.1 |
 | Evaluate 	| Risk: Medium <br> Confidence:    Medium     	|
 | Prevention  	| Please upgrade to the latest version of jquery-ui. |
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id:  829<br>WASC id : 15       	|
+| Identify 	|  The page includes one or more script files from a third-party domain	<br><br>**Evidence** <br><br> <ol><li><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js?ver=02fc163323d2ee7aa277411bbc10e1e7" id="gsap-js-js"></script></li><li><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4300098778201117" crossorigin="anonymous"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=G-HC8HNVJVEZ"></script></li><li><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150747362-1"></script></li><li><script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script></li></ol>|
+| Evaluate 	| Risk:  Low <br> Confidence:   Medium        	|
+| Prevention  	| Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application. |
+
+
 
 
 </ol>
@@ -285,6 +286,15 @@ The vulnerablities that need to be observed are:
 
 <li>Information Disclosure <a id="info"></a> </li><br>
 <ol>
+<li>PII Disclosure</li><br>
+
+|    	    | Description      	|
+|----------	|----------------------------------	|
+| Alert    	| CWE id:359 <br>WASC id : 13      	|
+| Identify 	|  The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data	<br><br>**Evidence** <br><br> 376574821370814 found in </image:loc>https://www.airselangor.com/wp-content/upload/elementor/thumbs/3985444548_376574821370814_313752166118313748_n-qfff4di9rre33x5uf18b31k1j7cjvuaca3syssmhmg.jpg</image:loc>|
+| Evaluate 	| Risk: High <br> Confidence: Medium        	|
+| Prevention  	| Check the response for the potential presence of personally identifiable information(PII), ensure nothing sensitive is leaked by the application . |
+
 <li>Suspicious Comments</li><br>
 
 |       	| Description      	|
@@ -330,14 +340,7 @@ The vulnerablities that need to be observed are:
 | Evaluate 	| Risk: Low <br> Confidence: Low        	|
 | Prevention  	| Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns. |
 
-<li>PII Disclosure</li><br>
 
-|    	    | Description      	|
-|----------	|----------------------------------	|
-| Alert    	| CWE id:359 <br>WASC id : 13      	|
-| Identify 	|  The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data	<br><br>**Evidence** <br><br> 376574821370814 found in </image:loc>https://www.airselangor.com/wp-content/upload/elementor/thumbs/3985444548_376574821370814_313752166118313748_n-qfff4di9rre33x5uf18b31k1j7cjvuaca3syssmhmg.jpg</image:loc>|
-| Evaluate 	| Risk: High <br> Confidence: Medium        	|
-| Prevention  	| Check the response for the potential presence of personally identifiable information(PII), ensure nothing sensitive is leaked by the application . |
 
 </ol>
 </ol>
