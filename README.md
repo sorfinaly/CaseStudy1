@@ -151,7 +151,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 <li>CSRF <a id="csrf"></a></li><br>
 <ol>
 
-<li>Absence of Anti-CSRF Tokens <a id="t2"></a><</li><br>
+<li>Absence of Anti-CSRF Tokens <a id="t3"></a><</li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -161,7 +161,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Phase: Architecture and Design<br><br>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid <br><br>For example, use anti-CSRF packages such as the OWASP CSRFGuard.<br><br>Phase: Implementation<br><br>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.<br><br>Phase: Architecture and Design<br><br>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).<br><br>Note that this can be bypassed using XSS.<br><br>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.<br><br>Note that this can be bypassed using XSS.<br><br>Use the ESAPI Session Management control.<br><br>This control includes a component for CSRF.<br><br>Do not use the GET method for any request that triggers a state change.<br><br>Phase: Implementation<br><br>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.|
 <h4 align="center">Table 3 </h4>
 
-<li>Cookie with SameSite Attribute None</li><br>
+<li>Cookie with SameSite Attribute None<a id="t4"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -172,7 +172,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 <h4 align="center">Table 4</h4>
 
 
-<li>Cross-Domain Misconfiguration</li><br>
+<li>Cross-Domain Misconfiguration<a id="t5"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -186,7 +186,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 <li>Secured Cookies <a id="securedcookie"></a></li><br>
 
 <ol>
-<li>Session ID in URL Rewrite</li><br>
+<li>Session ID in URL Rewrite<a id="t6"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -196,7 +196,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| For secure content, put session ID in a cookie. To be even more secure consider using a combination of cookie and URL rewrite. |
 <h4 align="center">Table 6</h4>
 
-<li>Retrieved from Cache</li><br>
+<li>Retrieved from Cache<a id="t7"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -206,7 +206,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user: <br><br>Cache-Control: no-cache, no-store, must-revalidate, private <br><br>Pragma: no-cache<br><br>Expires: 0 <br><br>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. |
 <h4 align="center">Table 7</h4>
 
-<li>Loosely Scoped Cookie</li><br>
+<li>Loosely Scoped Cookie<a id="t8"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -220,7 +220,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 
 <li>CSP <a id="csp"></a></li><br>
 <ol>
-<li>Content Security Policy (CSP) Header Not Set </li><br>
+<li>Content Security Policy (CSP) Header Not Set<a id="t9"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -230,7 +230,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header. |
 <h4 align="center">Table 9</h4>
 
-<li>Missing Anti-clicking Header </li><br>
+<li>Missing Anti-clicking Header <a id="t10"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -246,7 +246,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 
 <ol>
 
-<li>Vulnerable JS LIbrary </li><br>
+<li>Vulnerable JS LIbrary <a id="t11"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -256,7 +256,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Please upgrade to the latest version of jquery-ui. |
 <h4 align="center">Table 11</h4>
 
-<li>Cross-Domain JavaScript Source File Inclusion</li><br>
+<li>Cross-Domain JavaScript Source File Inclusion<a id="t12"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -271,7 +271,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 <li>HTTPS Implementation <a id="https"></a> </li><br>
 
 <ol>
-<li>Strict-Transport-Security Header Not Set</li><br>
+<li>Strict-Transport-Security Header Not Set<a id="t13"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -283,7 +283,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 
 </ol>
 
-<li>Cookie Poisoning <a id="cookiepoison"></a> </li><br>
+<li>Cookie Poisoning <a id="cookiepoison"></a><a id="t14"> </li><br>
 
 <ol>
 
@@ -295,7 +295,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters.  |
 <h4 align="center">Table 14</h4>
 
-<li>Cookie No HTTPOnly Flag</li><br>
+<li>Cookie No HTTPOnly Flag<a id="t15"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -305,7 +305,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Ensure that the HttpOnly Flag is set for all cookies.  |
 <h4 align="center">Table 15</h4>
 
-<li>Cookie without Secure Flag</li><br>
+<li>Cookie without Secure Flag<a id="t16"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -320,7 +320,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 <li>Potential XSS <a id="xss"></a> </li><br>
 
 <ol>
-<li>User Controllable HTML Element Attribute (Potential XSS)</li><br>
+<li>User Controllable HTML Element Attribute (Potential XSS)<a id="t17"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -334,7 +334,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 
 <li>Information Disclosure <a id="info"></a> </li><br>
 <ol>
-<li>PII Disclosure</li><br>
+<li>PII Disclosure<a id="t18"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -344,7 +344,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Check the response for the potential presence of personally identifiable information(PII), ensure nothing sensitive is leaked by the application . |
 <h4 align="center">Table 18</h4>
 
-<li>Suspicious Comments</li><br>
+<li>Suspicious Comments<a id="t19"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -354,7 +354,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Remove all comments that return information that may help an attacker and fix any underlying problems they refer to. |
 <h4 align="center">Table 19</h4>
 
-<li> Sensitive Information in URL </li><br>
+<li> Sensitive Information in URL <a id="t20"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -364,7 +364,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| Do not pass sensitive information in URIs. |
 <h4 align="center">Table 20</h4>
 
-<li>Re-examine Cache-control Directives</li><br>
+<li>Re-examine Cache-control Directives<a id="t21"></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
@@ -374,7 +374,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	| For secure content, ensure the cache-control HTTP header is set with "no-cache, no-store, must-revalidate". If an asset should be cached consider setting the directives "public, max-age, immutable". |
 <h4 align="center">Table 21</h4>
 
-<li>X-Content-Type-Options Header Missing</li><br>
+<li>X-Content-Type-Options Header Missing<a id="t22"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
@@ -384,7 +384,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 | Prevention  	|Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages. If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing. |
 <h4 align="center">Table 22</h4>
 
-<li>Timestamp Disclosure - Unix</li><br>
+<li>Timestamp Disclosure - Unix<a id="t23"></li><br>
 
 |    	    | Description      	|
 |----------	|----------------------------------	|
