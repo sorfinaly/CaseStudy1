@@ -154,7 +154,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 <li>CSRF <a id="csrf"></a></li><br>
 <ol>
 
-<li>Absence of Anti-CSRF Tokens <a id="t3"></a><</li><br>
+<li>Absence of Anti-CSRF Tokens <a id="t3"></a></li><br>
 
 |       	| Description      	|
 |----------	|----------------------------------	|
