@@ -215,7 +215,7 @@ Therefore, the results we obtained from both scanning, we concluded into tables 
 |----------	|----------------------------------	|
 | Alert    	| CWE id:565 <br>WASC id :  	15     	|
 | Identify 	| Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.	<br><br>**Evidence** <br><br> The origin domain used for comparison was: googleads.g.doubleclick.net test_cookie=CheckForPermission|
-| Evaluate 	| Risk: 565 <br> Confidence:   Low      	|
+| Evaluate 	| Risk: Informational <br> Confidence:   Low      	|
 | Prevention  	| Always scope cookies to a FQDN (Fully Qualified Domain Name). |
 <h4 align="center">Table 8</h4>
 
